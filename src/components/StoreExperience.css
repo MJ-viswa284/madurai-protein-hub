@@ -1,0 +1,111 @@
+.store {
+  min-height: 100vh;
+  background: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.store-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Anton", sans-serif;
+  font-size: 20vw;
+  color: rgba(255,255,255,0.02);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.store-inner {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.store-content {
+  flex: 1;
+}
+
+.store-tag {
+  color: #f5c542;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.store-title {
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.store-red {
+  color: #d61f1f;
+}
+
+.store-divider {
+  width: 50px;
+  height: 3px;
+  background: #d61f1f;
+  margin-bottom: 25px;
+}
+
+.store-desc {
+  color: #8a8a8a;
+  line-height: 1.8;
+  max-width: 500px;
+  margin-bottom: 40px;
+}
+
+.store-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.store-feature {
+  background: #161616;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 25px;
+}
+
+.store-feature h3 {
+  font-family: "Anton", sans-serif;
+  color: #d61f1f;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.store-feature p {
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+.store-image {
+  width: 400px;
+  height: 550px;
+  background: #161616;
+  border: 1px solid rgba(214,31,31,0.3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(255,255,255,0.2);
+
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

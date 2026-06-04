@@ -1,0 +1,123 @@
+.offers {
+  min-height: 100vh;
+  background: #111111;
+  padding: 100px 80px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offers-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Anton", sans-serif;
+  font-size: 20vw;
+  color: rgba(255,255,255,0.02);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.offers-inner {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+}
+
+.offers-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.offers-tag {
+  color: #f5c542;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.offers-title {
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin: 20px 0;
+  line-height: 1;
+}
+
+.offers-red {
+  color: #d61f1f;
+}
+
+.offers-desc {
+  max-width: 600px;
+  margin: auto;
+  color: #8a8a8a;
+  line-height: 1.8;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.offer-card {
+  background: #161616;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 40px 30px;
+  transition: 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(214,31,31,0.4);
+}
+
+.featured {
+  border-color: rgba(214,31,31,0.5);
+}
+
+.offer-label {
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(214,31,31,0.15);
+  color: #d61f1f;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.offer-card h3 {
+  font-family: "Anton", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.offer-card p {
+  color: #8a8a8a;
+  line-height: 1.8;
+}
+
+.offer-divider {
+  width: 40px;
+  height: 3px;
+  background: #f5c542;
+  margin: 25px 0;
+}
+
+.offer-action {
+  color: #f5c542;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

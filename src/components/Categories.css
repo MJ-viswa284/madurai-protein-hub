@@ -1,0 +1,114 @@
+.categories {
+  min-height: 100vh;
+  background: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 80px;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.categories-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Anton", sans-serif;
+  font-size: 20vw;
+  color: rgba(255,255,255,0.02);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.categories-inner {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+}
+
+.categories-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #f5c542;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.categories-tag::before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: #f5c542;
+}
+
+.categories-title {
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.categories-title span {
+  color: #d61f1f;
+}
+
+.categories-desc {
+  max-width: 500px;
+  color: #8a8a8a;
+  line-height: 1.8;
+  margin-bottom: 60px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.category-card {
+  background: #161616;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 40px 30px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.category-card:hover {
+  border-color: rgba(214,31,31,0.4);
+  transform: translateY(-6px);
+}
+
+.category-number {
+  font-family: "Anton", sans-serif;
+  font-size: 3rem;
+  color: rgba(214,31,31,0.2);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.category-card h3 {
+  font-family: "Anton", sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.category-line {
+  width: 40px;
+  height: 3px;
+  background: #d61f1f;
+}
+
+.category-card:hover .category-line {
+  width: 80px;
+  transition: 0.3s;
+}
