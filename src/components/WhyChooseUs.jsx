@@ -1,4 +1,9 @@
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./WhyChooseUs.css";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const reasons = [
   {
@@ -40,26 +45,114 @@ const reasons = [
 ];
 
 export default function WhyChooseUs() {
-  return (
-    <section className="why">
+  const sectionRef = useRef(null);
+  const bgTextRef = useRef(null);
+  const tagRef = useRef(null);
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const gridRef = useRef(null);
 
-      <div className="why-bg-text">WHY US</div>
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+
+      // ── BG text parallax ──────────────────────────────
+      gsap.to(bgTextRef.current, {
+        y: -100,
+        ease: "none",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+
+      // ── Header reveal ─────────────────────────────────
+      const headerTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+        defaults: { ease: "power3.out" },
+      });
+
+      headerTl.from(tagRef.current, {
+        y: -20,
+        opacity: 0,
+        duration: 0.6,
+      }, 0);
+
+      headerTl.from(titleRef.current, {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+      }, 0.15);
+
+      headerTl.from(subtitleRef.current, {
+        y: 20,
+        opacity: 0,
+        duration: 0.6,
+      }, 0.35);
+
+      // ── Cards stagger in ──────────────────────────────
+      const cards = gridRef.current.querySelectorAll(".why-card");
+
+      gsap.from(cards, {
+        y: 60,
+        opacity: 0,
+        duration: 0.7,
+        stagger: {
+          amount: 0.6,
+          from: "start",
+        },
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: gridRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ── Card numbers count-up feel ────────────────────
+      // Each card number flickers in with clip
+      gsap.from(cards, {
+        clipPath: "inset(0 100% 0 0)",
+        duration: 0.5,
+        stagger: 0.1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: gridRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section className="why" ref={sectionRef}>
+
+      <div className="why-bg-text" ref={bgTextRef}>WHY US</div>
 
       <div className="why-inner">
 
         {/* Header */}
         <div className="why-header">
-          <span className="why-tag">Why Choose Us</span>
-          <h2 className="why-title">
+          <span className="why-tag" ref={tagRef}>Why Choose Us</span>
+          <h2 className="why-title" ref={titleRef}>
             The <span className="why-title-red">Difference</span> Is Clear
           </h2>
-          <p className="why-subtitle">
+          <p className="why-subtitle" ref={subtitleRef}>
             Not all supplement stores are built the same. Here's why Madurai trusts us.
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="why-grid">
+        <div className="why-grid" ref={gridRef}>
           {reasons.map((r) => (
             <div className="why-card" key={r.number}>
               <div className="why-card-top">
