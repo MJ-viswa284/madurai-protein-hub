@@ -1,0 +1,165 @@
+/* ═══════════════════════════════════════════════════════
+   MADURAI PROTEIN HUB — GLOBAL RESPONSIVE
+   Single file covers all sections at all breakpoints
+   Import this once in main.jsx or index.css
+═══════════════════════════════════════════════════════ */
+
+/* ─── TABLET (max 1024px) ────────────────────────────── */
+@media (max-width: 1024px) {
+
+  /* Header */
+  .header { padding: 20px 40px; }
+  .header--scrolled { padding: 14px 40px; }
+
+  /* Hero */
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 40px 60px;
+    gap: 40px;
+    text-align: center;
+  }
+  .hero-content { max-width: 100%; }
+  .hero-title { font-size: 5rem; }
+  .hero-buttons { justify-content: center; }
+  .hero-stats { justify-content: center; flex-wrap: wrap; gap: 20px; }
+  .hero-stat { border-right: none; padding-right: 0; margin-right: 0; }
+  .hero-image-wrapper { display: none; }
+
+  /* About */
+  .about { padding: 80px 40px; }
+  .about-inner { flex-direction: column; gap: 50px; align-items: center; }
+  .about-images { width: 340px; height: 400px; }
+  .about-img-main { width: 260px; height: 340px; }
+  .about-img-secondary { width: 180px; height: 230px; }
+  .about-content { max-width: 100%; text-align: center; }
+  .about-tag { justify-content: center; }
+  .about-tag::before { display: none; }
+  .about-divider { margin: 0 auto 24px; }
+  .about-features { text-align: left; }
+  .about-btn { width: 100%; }
+
+  /* Why Choose Us */
+  .why { padding: 80px 40px; }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-title { font-size: 3rem; }
+
+  /* Categories */
+  .categories { padding: 80px 40px; }
+  .categories-grid { grid-template-columns: repeat(2, 1fr); }
+  .categories-title { font-size: 3rem; }
+
+  /* Athlete */
+  .athlete { padding: 80px 40px; }
+  .athlete-header { flex-direction: column; align-items: flex-start; gap: 30px; }
+  .athlete-title { font-size: 4.5rem; }
+  .athlete-cards { grid-template-columns: 1fr; }
+
+  /* Store */
+  .store { padding: 80px 40px; }
+  .store-inner { flex-direction: column; gap: 50px; }
+  .store-title { font-size: 3rem; }
+  .store-image-wrap { width: 100%; }
+  .store-image-placeholder { height: 400px; }
+
+  /* Offers */
+  .offers { padding: 80px 40px; }
+  .offers-grid { grid-template-columns: 1fr; }
+  .offers-title { font-size: 3rem; }
+
+  /* Testimonials */
+  .testimonials { padding: 80px 40px; }
+  .testimonials-stats { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .testimonials-title { font-size: 3rem; }
+
+  /* Contact */
+  .contact { padding: 80px 40px 0; }
+  .contact-inner { flex-direction: column; gap: 50px; }
+  .contact-title { font-size: 4rem; }
+  .contact-right { width: 100%; }
+}
+
+/* ─── MOBILE (max 600px) ─────────────────────────────── */
+@media (max-width: 600px) {
+
+  /* Header */
+  .header { padding: 18px 24px; }
+  .header--scrolled { padding: 12px 24px; }
+  .header-cta { display: none; }
+
+  /* Hero */
+  .hero { padding: 100px 24px 50px; }
+  .hero-title { font-size: 3.8rem; }
+  .hero-subtitle { font-size: 1.5rem; }
+  .hero-buttons { flex-direction: column; gap: 12px; }
+  .primary-btn, .secondary-btn { width: 100%; text-align: center; }
+  .hero-stats { gap: 16px; }
+  .hero-stat h3 { font-size: 1.6rem; }
+
+  /* About */
+  .about { padding: 60px 24px; }
+  .about-title { font-size: 2.6rem; }
+  .about-images { width: 280px; height: 340px; }
+  .about-img-main { width: 220px; height: 280px; }
+  .about-img-secondary { width: 160px; height: 200px; }
+  .about-features { grid-template-columns: 1fr; }
+
+  /* Why Choose Us */
+  .why { padding: 60px 24px; }
+  .why-grid { grid-template-columns: 1fr; }
+  .why-title { font-size: 2.4rem; }
+  .why-card { padding: 30px 24px; }
+
+  /* Categories */
+  .categories { padding: 60px 24px; }
+  .categories-grid { grid-template-columns: 1fr; }
+  .categories-title { font-size: 2.4rem; }
+  .category-card { padding: 30px 24px; }
+
+  /* Athlete */
+  .athlete { padding: 60px 24px; }
+  .athlete-title { font-size: 3.2rem; }
+  .athlete-header-stats { gap: 20px; flex-wrap: wrap; }
+  .athlete-card { padding: 30px 24px; }
+  .athlete-card-stat-value { font-size: 3.2rem; }
+
+  /* Store */
+  .store { padding: 60px 24px; }
+  .store-title { font-size: 2.4rem; }
+  .store-features { grid-template-columns: 1fr; }
+  .store-image-placeholder { height: 300px; }
+  .store-cta { width: 100%; text-align: center; justify-content: center; }
+
+  /* Offers */
+  .offers { padding: 60px 24px; }
+  .offers-title { font-size: 2.4rem; }
+  .offer-card { padding: 30px 24px; }
+
+  /* Testimonials */
+  .testimonials { padding: 60px 24px; }
+  .testimonials-title { font-size: 2.4rem; }
+  .testimonials-stats { grid-template-columns: repeat(2, 1fr); }
+  .testimonial-card { padding: 28px 20px; }
+
+  /* Contact */
+  .contact { padding: 60px 24px 0; }
+  .contact-title { font-size: 3rem; }
+  .contact-cta { width: 100%; justify-content: center; }
+  .contact-right { grid-template-columns: 1fr; }
+  .contact-footer { flex-direction: column; gap: 8px; text-align: center; padding: 20px 24px; }
+  .contact-trust { flex-wrap: wrap; gap: 20px; }
+}
+
+/* ─── SMALL MOBILE (max 380px) ───────────────────────── */
+@media (max-width: 380px) {
+
+  .hero-title { font-size: 3rem; }
+  .why-title, .categories-title, .offers-title, .testimonials-title { font-size: 2rem; }
+  .athlete-title { font-size: 2.6rem; }
+  .store-title { font-size: 2rem; }
+  .contact-title { font-size: 2.4rem; }
+  .about-title { font-size: 2.2rem; }
+  .testimonials-stats { grid-template-columns: repeat(2, 1fr); }
+  .stat-value { font-size: 2rem; }
+}
